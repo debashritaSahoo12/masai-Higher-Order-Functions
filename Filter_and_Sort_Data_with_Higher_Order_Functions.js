@@ -16,13 +16,9 @@ let input = [
   { name: "Olivia", marks: 82 },
 ];
 function processStudents(arr){
-    let output=[],res=[]
-  arr.filter(ele=>{
-     if(ele.marks>60){
-        return output.push(ele)
-     }
-})
-output.sort((a,b)=>b.marks-a.marks).map(ele=>{
+    let res=[]
+  let narr=arr.filter(ele=>ele.marks>60)
+narr.sort((a,b)=>b.marks-a.marks).map(ele=>{
      res.push(ele.name)
 })
 return res
