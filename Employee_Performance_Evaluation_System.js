@@ -24,7 +24,5 @@ let output=filtered.map((ele)=>{
           ? "Good"
           : "Needs Improvement",
     };
-}).sort((a,b)=>{
-let perform={"Excellent":3,"Good":2,"Need Improvement":1}
-return perform[b.performance]-perform[a.performance]})
+}).sort((a,b)=>a.performance.localeCompare(b.performance))
 console.log(output)
